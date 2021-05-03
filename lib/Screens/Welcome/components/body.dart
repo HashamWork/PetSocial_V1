@@ -3,6 +3,7 @@ import 'package:flutter_svg/svg.dart';
 
 import 'background.dart';
 import 'package:pet_app_01/Components/rounded_button.dart';
+import 'package:pet_app_01/Screens/Login/login_screen.dart';
 import 'package:pet_app_01/constants.dart';
 
 class Body extends StatelessWidget {
@@ -29,7 +30,14 @@ class Body extends StatelessWidget {
             RoundedButton(
               text: "Login",
               press: () {
-                print('Login is working');
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return LoginScreen();
+                    },
+                  ),
+                );
               },
             ),
             RoundedButton(
