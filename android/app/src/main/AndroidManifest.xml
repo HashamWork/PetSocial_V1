@@ -2,7 +2,8 @@
     package="com.example.pet_app_01">
    <application
         android:label="pet_app"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/ic_launcher"
+        android:usesCleartextTraffic="true">
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"

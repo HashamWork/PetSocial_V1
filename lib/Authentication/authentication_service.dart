@@ -13,7 +13,11 @@ class AuthenticationService {
     return _firebaseAuth.currentUser.uid;
   }
 
-  Future<String> singIn(String email, String password) async {
+  Future<void> signOut() async {
+    await _firebaseAuth.signOut();
+  }
+
+  Future<String> signIn(String email, String password) async {
     try {
       await _firebaseAuth.signInWithEmailAndPassword(
           email: email, password: password);
