@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:pet_app_01/Screens/Signup/components/body.dart';
 
 import 'background.dart';
 import 'package:pet_app_01/Components/rounded_button.dart';
 import 'package:pet_app_01/Screens/Login/login_screen.dart';
+import 'package:pet_app_01/Screens/Signup/signup_screen.dart';
 import 'package:pet_app_01/constants.dart';
 
 class Body extends StatelessWidget {
@@ -43,7 +45,14 @@ class Body extends StatelessWidget {
             RoundedButton(
               text: "Signup",
               press: () {
-                print('Signup is working');
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return SignUpScreen();
+                    },
+                  ),
+                );
               },
             ),
           ],

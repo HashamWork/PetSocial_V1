@@ -20,15 +20,26 @@ class AlreadyHaveAnAccountCheck extends StatelessWidget {
           style: TextStyle(color: kPrimaryColor),
         ),
         GestureDetector(
-          onTap: press,
-          child: Text(
-            login ? "Sign Up" : "Sign In",
-            style: TextStyle(
-              color: kPrimaryColor,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-        )
+            onTap: press,
+            // child: Text(
+            //   login ? "Sign Up" : "Sign In",
+            //   style: TextStyle(
+            //     color: kPrimaryColor,
+            //     fontWeight: FontWeight.bold,
+            //   ),
+            // ),
+            child: login
+                ? Text(
+                    login ? "Sign Up" : "Sign In",
+                    style: TextStyle(
+                      color: kPrimaryColor,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  )
+                : TextButton(
+                    onPressed: () {},
+                    child: Text('Wollah'),
+                  )),
       ],
     );
   }
